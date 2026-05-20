@@ -1,0 +1,306 @@
+@media (max-width: 1280px) {
+  .chapter-rail {
+    display: none;
+  }
+}
+
+@media (max-width: 1120px) {
+  .hero__grid,
+  .two-col,
+  .coach__grid,
+  .challenge__grid,
+  .results__grid,
+  .voice__grid,
+  .tech__grid,
+  .download__grid,
+  .feature-display {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-card,
+  .compare,
+  .download-card {
+    margin-inline: auto;
+  }
+
+  .problem-card h3 {
+    font-size: clamp(48px, 9vw, 86px);
+  }
+}
+
+@media (max-width: 980px) {
+  .topbar {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  .chapter-readout {
+    display: none;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .route-board {
+    min-height: auto;
+    padding: 18px 0;
+    display: grid;
+    align-content: center;
+  }
+
+  .route-board__svg {
+    display: none;
+  }
+
+  .route-point {
+    position: relative;
+    inset: auto !important;
+    width: auto;
+    margin: 18px;
+  }
+
+  .weight-table {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .weight-board {
+    min-height: 700px;
+  }
+
+  .weight-lab__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .weight-lab__stats span {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .weight-lab__stats span:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .problem-board {
+    min-height: auto;
+    padding: 18px;
+    display: grid;
+    gap: 12px;
+  }
+
+  .problem-board::before {
+    display: none;
+  }
+
+  .problem-chip,
+  .problem-chip:nth-child(1),
+  .problem-chip:nth-child(2),
+  .problem-chip:nth-child(3),
+  .problem-chip:nth-child(4),
+  .problem-chip:nth-child(5) {
+    position: static;
+    width: 100%;
+    transform: none !important;
+  }
+
+  .feature-copy h3,
+  .quote-machine__line,
+  .final h2 {
+    overflow-wrap: anywhere;
+  }
+
+  .scanner-window {
+    align-content: center;
+    gap: 18px;
+    padding-top: 24px;
+  }
+
+  .scanner-window__tags {
+    position: relative;
+    inset: auto;
+    padding: 0 18px 18px;
+    justify-content: center;
+  }
+
+  [data-anim="photo-wipe"] {
+    transform: translateY(24px);
+  }
+
+  [data-anim="photo-wipe"].is-visible {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --wrap: min(100vw - 28px, 1180px);
+  }
+
+  .scene {
+    min-height: auto;
+    padding: 96px 0 64px;
+  }
+
+  .section-title {
+    font-size: clamp(34px, 11vw, 56px);
+    line-height: 1.04;
+  }
+
+  .topbar {
+    top: 10px;
+    width: calc(100vw - 18px);
+  }
+
+  .brand__text,
+  .menu-switch b {
+    display: none;
+  }
+
+  .menu-switch {
+    width: 46px;
+    padding: 0;
+  }
+
+  .site-menu__panel {
+    max-height: calc(100svh - 80px);
+    border-radius: 24px;
+    padding: 14px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid button {
+    min-height: 96px;
+  }
+
+  .menu-grid b {
+    margin-bottom: 16px;
+  }
+
+  .hero {
+    padding-top: 116px;
+  }
+
+  .hero__copy h1 {
+    font-size: clamp(76px, 24vw, 118px);
+  }
+
+  .hero__meter {
+    display: none;
+  }
+
+  .phone-card {
+    transform: none !important;
+  }
+
+  .phone-card__screen {
+    min-height: 420px;
+  }
+
+  .scan-orbit {
+    width: 170px;
+    height: 170px;
+  }
+
+  .problem-card h3 {
+    font-size: clamp(46px, 14vw, 62px);
+  }
+
+  .feature-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-tab {
+    padding-inline: 8px;
+  }
+
+  .scanner-window {
+    min-height: 300px;
+  }
+
+  .compare__stage {
+    min-height: 420px;
+    height: 500px;
+  }
+
+  .weight-board {
+    min-height: auto;
+    padding: 18px;
+    display: grid;
+    gap: 18px;
+  }
+
+  .weight-canvas {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: 240px;
+    border: 1px solid rgba(255,255,255,.11);
+    border-radius: 22px;
+    background: rgba(255,255,255,.03);
+  }
+
+  .weight-table {
+    position: relative;
+    inset: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .future-stack article {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .download-card {
+    min-height: 390px;
+  }
+
+  .download-phone {
+    width: min(220px, 82%);
+  }
+
+  .voice-card {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__copy h1 {
+    font-size: clamp(62px, 22vw, 92px);
+  }
+
+  .problem-card {
+    padding: 24px;
+  }
+
+  .problem-card h3 {
+    font-size: clamp(40px, 13vw, 50px);
+  }
+
+  .quote-machine {
+    padding: 22px;
+  }
+
+  .weight-row b {
+    font-size: 22px;
+  }
+
+  .voice-card__play {
+    width: 74px;
+    height: 74px;
+  }
+
+  .download-card {
+    padding: 16px;
+  }
+
+  .download-phone {
+    width: 100%;
+  }
+}

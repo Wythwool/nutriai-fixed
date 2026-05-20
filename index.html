@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07100d" />
+  <title>NutriAI. Особиста історія</title>
+  <meta name="description" content="NutriAI. Особиста історія, додаток, прогрес і план розвитку." />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar" data-topbar>
+    <a class="brand" href="#hero" aria-label="NutriAI на початок">
+      <span class="brand__mark">N</span>
+      <span class="brand__text">Nutri<span>AI</span></span>
+    </a>
+
+    <div class="chapter-readout" aria-live="polite">
+      <span class="chapter-readout__num" data-chapter-num>01</span>
+      <span class="chapter-readout__name" data-chapter-name>Старт</span>
+    </div>
+
+    <button class="menu-switch" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu">
+      <span></span><span></span><span></span>
+      <b>меню</b>
+    </button>
+  </header>
+
+  <aside class="chapter-rail" aria-label="Навігація по розділах" data-rail></aside>
+
+  <nav class="site-menu" id="site-menu" data-menu aria-hidden="true">
+    <div class="site-menu__backdrop" data-menu-close></div>
+    <div class="site-menu__panel">
+      <div class="site-menu__head">
+        <p>карта розділів</p>
+        <button type="button" data-menu-close>закрити</button>
+      </div>
+      <div class="menu-grid" data-menu-links></div>
+      <p class="site-menu__note">Оберіть розділ. Меню закриється автоматично.</p>
+    </div>
+  </nav>
+
+  <main>
+    <section class="scene hero" id="hero" data-chapter="01" data-title="Старт" data-theme="green">
+      <div class="hero__meter" aria-hidden="true">
+        <span>103</span>
+        <i></i>
+        <span>83</span>
+      </div>
+
+      <div class="wrap hero__grid">
+        <div class="hero__copy" data-anim="split-title">
+          <p class="eyebrow">особиста історія та власний додаток</p>
+          <h1>
+            <span>Nutri</span><span>AI</span>
+          </h1>
+          <p class="hero__lead">Моя історія від 103 кг до 83 кг і додаток для контролю харчування.</p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#results">показати результат</a>
+            <a class="btn btn--ghost" href="#app">функції додатка</a>
+            <a class="btn btn--ghost" href="#download">скачати APK</a>
+          </div>
+        </div>
+
+        <div class="phone-card" data-anim="phone-in" aria-label="Інтерфейс NutriAI">
+          <div class="phone-card__top">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="phone-card__screen">
+            <div class="scan-orbit">
+              <i></i><i></i><i></i><i></i>
+              <b>N</b>
+            </div>
+            <div class="macro-stack">
+              <div style="--p:74"><span>калорії</span><b>1580 / 2100</b></div>
+              <div style="--p:62"><span>білки</span><b>88 г</b></div>
+              <div style="--p:45"><span>вода</span><b>1.6 л</b></div>
+            </div>
+            <p class="phone-card__caption">Аналіз їжі та щоденний прогрес.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="scroll-token" type="button" data-scroll-next>
+        <span>далі</span>
+        <i></i>
+      </button>
+    </section>
+
+    <section class="scene problem" id="story" data-chapter="02" data-title="Проблема" data-theme="red">
+      <div class="wrap two-col">
+        <div data-anim="word-slam">
+          <p class="eyebrow eyebrow--red">початок</p>
+          <h2 class="section-title">Ожиріння це серйозна проблема.</h2>
+        </div>
+
+        <div class="problem-card" data-anim="card-crack">
+          <span class="problem-card__label">основні ризики</span>
+          <h3>Ожиріння</h3>
+          <p>Серцево судинні хвороби, діабет другого типу, гормональні збої. Такі наслідки можуть з’явитися через зайву вагу.</p>
+          <p class="problem-card__bottom">Це моя історія.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene sport" id="sport" data-chapter="03" data-title="Спорт" data-theme="green">
+      <div class="wrap">
+        <div class="section-head" data-anim="rise-soft">
+          <p class="eyebrow">спорт</p>
+          <h2 class="section-title">Я займався спортом з дитинства. Вага все одно зростала.</h2>
+        </div>
+
+        <div class="route-board" data-route-board data-anim="route-draw">
+          <svg class="route-board__svg" viewBox="0 0 1000 260" preserveAspectRatio="none" aria-hidden="true">
+            <path class="route-board__shadow" d="M60 190 C170 40, 270 40, 370 135 S570 260, 660 120 S820 20, 940 170" />
+            <path class="route-board__path" d="M60 190 C170 40, 270 40, 370 135 S570 260, 660 120 S820 20, 940 170" />
+          </svg>
+
+          <article class="route-point route-point--one">
+            <b>3</b><span>футбол</span><small>дитсадок</small>
+          </article>
+          <article class="route-point route-point--two">
+            <b>6</b><span>бокс</span><small>тренування</small>
+          </article>
+          <article class="route-point route-point--three">
+            <b>9</b><span>плавання</span><small>заняття</small>
+          </article>
+          <article class="route-point route-point--four">
+            <b>12</b><span>103 кг</span><small>потрібен контроль</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene coach" id="coach" data-chapter="04" data-title="Тренер" data-theme="gold">
+      <div class="wrap coach__grid">
+        <div class="coach__copy" data-anim="coach-type">
+          <p class="eyebrow eyebrow--gold">тренер</p>
+          <h2 class="section-title">Пензул Артем Вікторович</h2>
+          <p class="section-text">Тренер пояснив, що тренувань недостатньо без контролю харчування. Потрібно знати свою норму калорій і вести щоденний облік.</p>
+        </div>
+
+        <div class="quote-machine" data-quote-machine>
+          <div class="quote-machine__line"><span data-type-line>Що саме треба в собі змінити?</span></div>
+          <div class="quote-machine__answer">
+            <span>відповідь</span>
+            <b>контроль щоденної норми калорій</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene challenge" id="challenge" data-chapter="05" data-title="Виклик" data-theme="red">
+      <div class="wrap challenge__grid">
+        <div data-anim="rise-soft">
+          <p class="eyebrow eyebrow--red">виклик</p>
+          <h2 class="section-title">Як у 12 років контролювати калорії щодня?</h2>
+          <p class="section-text">Більшість додатків були складними. Там багато ручного вводу, незрозумілі норми і мало мотивації продовжувати.</p>
+          <button class="btn btn--danger" type="button" data-problem-button>показати список</button>
+        </div>
+
+        <div class="problem-board" data-problem-board aria-label="Проблеми старих додатків">
+          <article class="problem-chip"><b>📊</b><span>складний інтерфейс</span></article>
+          <article class="problem-chip"><b>🔢</b><span>ручний підрахунок</span></article>
+          <article class="problem-chip"><b>🤷</b><span>незрозумілі норми</span></article>
+          <article class="problem-chip"><b>😴</b><span>важко тримати звичку</span></article>
+          <article class="problem-chip"><b>🥡</b><span>їжа не завжди є в базі</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene app" id="app" data-chapter="06" data-title="Додаток" data-theme="green">
+      <div class="wrap">
+        <div class="section-head section-head--center" data-anim="logo-pop">
+          <div class="big-mark">N</div>
+          <p class="eyebrow">рішення</p>
+          <h2 class="section-title">NutriAI</h2>
+          <p class="section-text">Фото їжі, меню, вода, кроки і прогрес. Один додаток для щоденного контролю.</p>
+        </div>
+
+        <div class="app-desk" data-feature-tabs>
+          <div class="feature-tabs" role="tablist" aria-label="Функції NutriAI">
+            <button class="feature-tab is-active" type="button" data-feature="scan" role="tab" aria-selected="true">сканер</button>
+            <button class="feature-tab" type="button" data-feature="menu" role="tab">меню</button>
+            <button class="feature-tab" type="button" data-feature="water" role="tab">вода</button>
+            <button class="feature-tab" type="button" data-feature="steps" role="tab">кроки</button>
+          </div>
+
+          <div class="feature-display">
+            <div class="scanner-window" data-scanner-window>
+              <div class="scanner-window__beam"></div>
+              <div class="scanner-window__plate">🥗</div>
+              <div class="scanner-window__tags">
+                <span>калорії</span><span>білки</span><span>жири</span><span>вуглеводи</span>
+              </div>
+            </div>
+            <div class="feature-copy">
+              <p class="feature-copy__kicker" data-feature-kicker>камера і аналіз</p>
+              <h3 data-feature-title>Фото їжі і розрахунок КБЖУ</h3>
+              <p data-feature-text>Користувач робить фото. Додаток показує приблизні калорії, білки, жири і вуглеводи.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene results" id="results" data-chapter="07" data-title="Результат" data-theme="green">
+      <div class="wrap results__grid">
+        <div data-anim="rise-soft">
+          <p class="eyebrow">результат</p>
+          <h2 class="section-title">103 кг до 83 кг</h2>
+          <p class="section-text">Мінус 20 кг за 7 місяців. Основою були контроль харчування, тренування і щоденний запис результатів.</p>
+          <div class="result-numbers">
+            <div><b>20</b><span>кг різниці</span></div>
+            <div><b>7</b><span>місяців</span></div>
+            <div><b>83</b><span>кг зараз</span></div>
+          </div>
+        </div>
+
+        <div class="compare" data-compare data-anim="photo-wipe">
+          <div class="compare__stage">
+            <img class="compare__img" src="assets/img/before.png" data-fallback="assets/img/before-placeholder.svg" alt="Фото до результату" />
+            <div class="compare__after" data-compare-after>
+              <img class="compare__img" src="assets/img/after.png" data-fallback="assets/img/after-placeholder.svg" alt="Фото після результату" />
+            </div>
+            <div class="compare__handle" data-compare-handle><span></span></div>
+            <span class="compare__tag compare__tag--before">до 103 кг</span>
+            <span class="compare__tag compare__tag--after">після 83 кг</span>
+          </div>
+          <input class="compare__range" data-compare-range type="range" min="0" max="100" value="52" aria-label="Порівняти фото до та після" />
+        </div>
+      </div>
+    </section>
+
+    <section class="scene lab" id="progress" data-chapter="08" data-title="Графік" data-theme="green">
+      <div class="wrap">
+        <div class="section-head" data-anim="rise-soft">
+          <p class="eyebrow">прогрес</p>
+          <h2 class="section-title">Дані прогресу</h2>
+          <p class="section-text">Вага змінювалась поступово протягом семи місяців.</p>
+        </div>
+
+        <div class="weight-lab" data-weight-lab>
+          <div class="weight-lab__toolbar">
+            <span>журнал ваги</span>
+            <b>103 до 83</b>
+          </div>
+          <div class="weight-board" data-weight-board>
+            <div class="weight-table" data-weight-table></div>
+            <canvas class="weight-canvas" data-weight-canvas aria-label="Дані прогресу"></canvas>
+          </div>
+          <div class="weight-lab__stats">
+            <span><b>20 кг</b> різниця</span>
+            <span><b>2,8 кг</b> на місяць</span>
+            <span><b>7 міс</b> контроль</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene voice" id="voice" data-chapter="09" data-title="Відгук" data-theme="gold">
+      <div class="wrap voice__grid">
+        <div data-anim="rise-soft">
+          <p class="eyebrow eyebrow--gold">тренер</p>
+          <h2 class="section-title">Голосовий відгук тренера</h2>
+          <p class="section-text">Натисніть кнопку і на сайті відтвориться запис.</p>
+        </div>
+
+        <div class="voice-card" data-voice-card>
+          <button class="voice-card__play" type="button" data-audio-toggle aria-label="Запустити відтворення">▶</button>
+          <div class="wave" data-wave>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="voice-card__meta">
+            <b>Відгук тренера</b>
+            <span>Аудіо запис</span>
+          </div>
+          <div class="voice-card__progress" aria-hidden="true">
+            <span data-audio-progress></span>
+          </div>
+          <div class="voice-card__time">
+            <span data-audio-current>0:00</span>
+            <span data-audio-duration>0:00</span>
+          </div>
+          <audio data-trainer-audio preload="metadata" playsinline>
+            <source src="assets/audio/trainer-review.m4a" type="audio/mp4" />
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene tech" id="future" data-chapter="10" data-title="Плани" data-theme="gold">
+      <div class="wrap tech__grid">
+        <div class="tech-card" data-anim="tech-list">
+          <p class="eyebrow">технології</p>
+          <h2 class="section-title">Стек</h2>
+          <div class="tech-list">
+            <p><span>01</span> Flutter для Android та iOS</p>
+            <p><span>02</span> Firebase для авторизації та збереження даних</p>
+            <p><span>03</span> OpenRouter AI для аналізу їжі</p>
+            <p><span>04</span> SQLite для щоденника</p>
+            <p><span>05</span> Push сповіщення</p>
+          </div>
+        </div>
+
+        <div class="future-stack" data-anim="stack-cards">
+          <p class="eyebrow eyebrow--gold">план</p>
+          <h2 class="section-title">Плани</h2>
+          <article><b>Етап 1</b><span>тестова версія</span></article>
+          <article><b>Етап 2</b><span>перші користувачі</span></article>
+          <article><b>Етап 3</b><span>версія для iOS</span></article>
+          <article><b>Етап 4</b><span>партнерства з лікарями</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene download" id="download" data-chapter="11" data-title="Скачати" data-theme="green">
+      <div class="wrap download__grid">
+        <div class="download__copy" data-anim="rise-soft">
+          <p class="eyebrow">скачати</p>
+          <h2 class="section-title">NutriAI для Android</h2>
+          <p class="section-text">Тестова APK версія додатка. Файл можна скачати на телефон або на ПК.</p>
+
+          <div class="download__actions">
+            <a class="btn btn--solid btn--download" href="assets/app/NutriAI.apk" data-download-link>скачати для Android</a>
+            <span>APK файл 190 МБ</span>
+            <a class="download__direct" href="assets/app/NutriAI.apk">пряме посилання</a>
+          </div>
+        </div>
+
+        <div class="download-card" data-anim="download-pop" aria-label="Скачування NutriAI">
+          <div class="download-card__top">
+            <span>NutriAI.apk</span>
+            <b>Android</b>
+          </div>
+
+          <div class="download-phone">
+            <div class="download-phone__mark">N</div>
+            <div class="download-phone__line"></div>
+            <div class="download-phone__line"></div>
+            <div class="download-phone__line download-phone__line--short"></div>
+          </div>
+
+          <div class="download-file">
+            <div>
+              <b>APK</b>
+              <span>версія для тесту</span>
+            </div>
+            <i>↓</i>
+          </div>
+
+          <div class="download-progress" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene final" id="final" data-chapter="12" data-title="Фінал" data-theme="green">
+      <div class="wrap final__inner" data-anim="final-hit">
+        <div class="big-mark">N</div>
+        <p class="eyebrow">фінал</p>
+        <h2>Дякую за увагу</h2>
+        <p>NutriAI це особиста історія і застосунок для контролю харчування.</p>
+        <a class="btn btn--solid" href="#download">скачати додаток</a>
+      </div>
+    </section>
+  </main>
+
+  <script defer src="js/data.js"></script>
+  <script defer src="js/utils.js"></script>
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/reveal.js"></script>
+  <script defer src="js/features.js"></script>
+  <script defer src="js/compare.js"></script>
+  <script defer src="js/weight-chart.js"></script>
+  <script defer src="js/typewriter.js"></script>
+  <script defer src="js/audio-player.js"></script>
+  <script defer src="js/download.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
