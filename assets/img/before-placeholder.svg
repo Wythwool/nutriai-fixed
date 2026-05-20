@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="placeholder before photo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2a1010"/>
+      <stop offset="1" stop-color="#07100d"/>
+    </linearGradient>
+    <filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .12"/></feComponentTransfer></filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#g)"/>
+  <rect width="900" height="1200" filter="url(#n)"/>
+  <circle cx="450" cy="430" r="120" fill="#ff554d" opacity=".24"/>
+  <rect x="290" y="570" width="320" height="430" rx="160" fill="#ff554d" opacity=".18"/>
+  <text x="450" y="1040" text-anchor="middle" fill="#ff8c84" font-family="Arial, sans-serif" font-size="54" font-weight="800">ДО 103 кг</text>
+</svg>
