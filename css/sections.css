@@ -862,6 +862,11 @@
   font-size: 13px;
   font-weight: 900;
 }
+.voice-card__status {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
 
 /* tech */
 .tech-card,
