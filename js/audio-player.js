@@ -1,65 +1,106 @@
 (() => {
-  const { qs } = window.Nutri;
+  const AUDIO_SRC = 'assets/audio/trainer-review.mp3';
+
+  function $(selector, root = document) {
+    return root.querySelector(selector);
+  }
 
   function formatTime(value) {
     if (!Number.isFinite(value)) return '0:00';
-    const total = Math.max(0, Math.floor(value));
+
+    const total = Math.floor(value);
     const minutes = Math.floor(total / 60);
     const seconds = String(total % 60).padStart(2, '0');
+
     return `${minutes}:${seconds}`;
   }
 
-  function updateUi(root, audio) {
-    const button = qs('[data-audio-toggle]', root);
-    const progress = qs('[data-audio-progress]', root);
-    const current = qs('[data-audio-current]', root);
-    const duration = qs('[data-audio-duration]', root);
-    const isPlaying = !audio.paused && !audio.ended;
+  function setStatus(root, text) {
+    const status = $('[data-audio-status]', root);
+    if (status) status.textContent = text;
+  }
 
-    root.classList.toggle('is-playing', isPlaying);
-    if (button) button.textContent = isPlaying ? '❚❚' : '▶';
+  function updateUi(root, audio) {
+    const button = $('[data-audio-toggle]', root);
+    const progress = $('[data-audio-progress]', root);
+    const current = $('[data-audio-current]', root);
+    const duration = $('[data-audio-duration]', root);
+
+    const playing = !audio.paused && !audio.ended;
+
+    root.classList.toggle('is-playing', playing);
+
+    if (button) button.textContent = playing ? '❚❚' : '▶';
     if (current) current.textContent = formatTime(audio.currentTime);
     if (duration) duration.textContent = formatTime(audio.duration);
+
     if (progress) {
-      const ratio = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
-      progress.style.width = `${ratio}%`;
+      const percent = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+      progress.style.width = `${percent}%`;
     }
   }
 
   function initAudioCard() {
-    const root = qs('[data-voice-card]');
+    const root = $('[data-voice-card]');
     if (!root) return;
 
-    const audio = qs('[data-trainer-audio]', root);
-    const button = qs('[data-audio-toggle]', root);
+    const audio = $('[data-trainer-audio]', root);
+    const button = $('[data-audio-toggle]', root);
+
     if (!audio || !button) return;
+
+    audio.src = AUDIO_SRC;
+    audio.preload = 'metadata';
+    audio.load();
 
     button.addEventListener('click', async () => {
       if (!audio.paused) {
         audio.pause();
         return;
       }
+
       try {
         await audio.play();
+        setStatus(root, 'Відтворюється');
       } catch (error) {
-        console.error(error);
+        setStatus(root, 'Не вдалося запустити аудіо');
+        console.error('Audio error:', error);
       }
     });
 
-    root.addEventListener('click', (event) => {
-      if (event.target.closest('[data-audio-toggle]')) return;
-      if (!event.target.closest('.voice-card__progress')) return;
-      const bar = event.target.closest('.voice-card__progress');
-      const rect = bar.getBoundingClientRect();
-      const ratio = Math.min(Math.max((event.clientX - rect.left) / rect.width, 0), 1);
-      if (audio.duration) {
-        audio.currentTime = audio.duration * ratio;
+    const bar = $('.voice-card__progress', root);
+
+    if (bar) {
+      bar.addEventListener('click', (event) => {
+        if (!audio.duration) return;
+
+        const rect = bar.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const percent = Math.min(Math.max(x / rect.width, 0), 1);
+
+        audio.currentTime = audio.duration * percent;
         updateUi(root, audio);
-      }
+      });
+    }
+
+    audio.addEventListener('loadedmetadata', () => {
+      setStatus(root, 'Аудіо готове');
+      updateUi(root, audio);
     });
 
-    ['loadedmetadata', 'timeupdate', 'play', 'pause', 'ended'].forEach((eventName) => {
-      audio.addEventListener(eventName, () => updateUi(root, audio));
+    audio.addEventListener('timeupdate', () => updateUi(root, audio));
+    audio.addEventListener('play', () => updateUi(root, audio));
+    audio.addEventListener('pause', () => updateUi(root, audio));
+
+    audio.addEventListener('ended', () => {
+      audio.currentTime = 0;
+      setStatus(root, 'Аудіо завершено');
+      updateUi(root, audio);
+    });
+
+    audio.addEventListener('error', () => {
+      setStatus(root, 'Файл аудіо не знайдено');
+      console.error('Audio file not found:', AUDIO_SRC);
     });
 
     updateUi(root, audio);
